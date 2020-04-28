@@ -48,6 +48,19 @@ public class Student {
     private String valid;
 
 
+    public Student(String sID, String sname, String sex, Date enrolTime, String departmentID, String type, String riskLevel, String location, String memo, String valid) {
+        this.sID = sID;
+        this.sname = sname;
+        this.sex = sex;
+        this.enrolTime = enrolTime;
+        this.departmentID = departmentID;
+        this.type = type;
+        this.riskLevel = riskLevel;
+        this.location = location;
+        this.memo = memo;
+        this.valid = valid;
+    }
+
     public Student() {
     }
 

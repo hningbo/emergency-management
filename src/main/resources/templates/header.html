@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<header th:fragment="nav">
+    <nav class="navbar navbar-expand-md navbar-inverse fixed-top bg-inverse">
+        <a class="navbar-brand" id="brand_s" href="index.html" th:href="@{/main}">XD学生返校应急管理系统</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto" id="menu_s">
+            </ul>
+
+            <ul class="navbar-nav navbar-right" id="login_s">
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"  id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:unless="${#httpServletRequest.remoteUser}">登录</a>
+                    <div class="dropdown-menu" id="login_s_dropdown" aria-labelledby="dropdown01">
+                        <a class="item1" href="login.html" th:href="@{/login}">账号登录</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"  id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:if="${#httpServletRequest.remoteUser}">注销</a>
+                    <div class="dropdown-menu" id="logout_s_dropdown" aria-labelledby="dropdown01">
+                        <a class="item1" href="login.html" th:href="@{/logout}">注销账号</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+</body>
+</html>
